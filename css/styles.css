@@ -107,6 +107,7 @@ img {
   color: var(--accent-color);
 }
 .menu-link:hover::after,
+.menu-link:focus::after,
 .current::after {
   position: absolute;
   content: "";
@@ -561,7 +562,6 @@ img {
 }
 .practics-item {
   width: 370px;
-  /* margin-top: 30px; */
   margin-left: 30px;
   margin-bottom: 30px;
   flex-basis: calc(100% / 3 - 30px);
@@ -577,6 +577,7 @@ img {
 }
 .practics-link {
   display: block;
+  position: relative;
 }
 .practics-link:hover,
 .practics-link:focus {
@@ -601,4 +602,35 @@ img {
   color: var(--title-text-color);
   font-size: 16px;
   line-height: 1.87;
+}
+
+.work-description {
+  display: flex;
+  margin: 0;
+  width: 100%;
+  max-width: 370px;
+  height: 294px;
+  padding: 63px 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  justify-content: center;
+  align-items: center;
+  color: var(--primayry-white-color);
+  background-image: linear-gradient(
+    rgba(33, 150, 243, 0.9) 0%,
+    rgba(33, 150, 243, 0.9) 100%
+  );
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+
+  opacity: 0;
+}
+.practics-link:hover .work-description,
+.practics-link:focus .work-description {
+  opacity: 1;
 }
