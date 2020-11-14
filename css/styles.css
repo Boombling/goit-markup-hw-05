@@ -339,15 +339,12 @@ img {
 }
 .photo-description {
   position: absolute;
-  display: flex;
   margin: 0;
   width: 100%;
   padding-top: 27px;
   padding-bottom: 27px;
   bottom: 0;
-
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   text-transform: uppercase;
   color: var(--primayry-white-color);
   background-image: linear-gradient(
