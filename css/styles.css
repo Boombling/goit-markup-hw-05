@@ -343,7 +343,8 @@ img {
   margin: 0;
   width: 100%;
   max-width: 370px;
-  height: 70px;
+  padding-top: 27px;
+  padding-bottom: 27px;
   bottom: 0;
 
   justify-content: center;
