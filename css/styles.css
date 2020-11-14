@@ -58,6 +58,7 @@ img {
 
 .main-nav {
   display: flex;
+  justify-content: center;
   align-items: baseline;
   border-bottom: 1px solid #ececec;
 }
@@ -102,6 +103,7 @@ img {
 .menu-link {
   color: var(--primayry-text-color);
   position: relative;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-link.current {
   color: var(--accent-color);
@@ -145,6 +147,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mail {
   width: 16px;
@@ -220,6 +223,7 @@ img {
   line-height: 1.87;
   align-items: center;
   text-align: center;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
 .button:focus {
@@ -409,6 +413,7 @@ img {
   height: 44px;
   background-color: var(--primayry-white-color);
   border-radius: 50%;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icon {
   display: flex;
@@ -443,6 +448,7 @@ img {
   align-items: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-icon {
   fill: var(--icon-color);
@@ -480,7 +486,7 @@ img {
 }
 .address-link {
   display: block;
-  /* margin-bottom: 9px; */
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: rgba(255, 255, 255, 0.6);
 }
 .address-link:hover,
@@ -547,6 +553,7 @@ img {
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .tabs-link:hover,
 .tabs-link:focus {
@@ -577,7 +584,7 @@ img {
 }
 .practics-link {
   display: block;
-  /* position: relative; */
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .practics-link:hover,
 .practics-link:focus {
@@ -647,23 +654,30 @@ img {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: all 1000ms ease-in;
 }
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
+}
+.is-hidden .modal {
+  transform: translate(-50%, 0%) scale(0.5);
 }
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-
+  transform: translate(-50%, -50%) scale(1);
   width: 528px;
   height: 581px;
-  background: var(--primayry-white-color);
+  background-color: var(--primayry-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding: 8px;
+  transition: transform 1s;
 }
 .modal-button {
   display: block;
