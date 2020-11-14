@@ -616,12 +616,12 @@ img {
 }
 .work-description {
   display: flex;
+  position: absolute;
   margin: 0;
   width: 100%;
   max-width: 370px;
   height: 294px;
   padding: 63px 24px;
-  position: absolute;
   top: 0;
   left: 0;
 
