@@ -338,12 +338,12 @@ img {
   position: relative;
 }
 .photo-description {
+  position: absolute;
   display: flex;
   margin: 0;
   width: 100%;
   max-width: 370px;
   height: 70px;
-  position: absolute;
   bottom: 0;
 
   justify-content: center;
